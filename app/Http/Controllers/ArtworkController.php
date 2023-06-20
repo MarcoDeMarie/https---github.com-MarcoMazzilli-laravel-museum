@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Artist;
+use App\Models\Artwork;
 use Illuminate\Http\Request;
 
-class ArtistController extends Controller
+class ArtworkController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,8 @@ class ArtistController extends Controller
      */
     public function index()
     {
-        $artists = Artist::orderBy('id', 'desc')->paginate(5);
-        return view('artist.index', compact('artists'));
+        $artists = Artwork::orderBy('id', 'desc')->paginate(5);
+        return view('artwork.index', compact('artwork'));
     }
 
     /**
@@ -42,12 +42,12 @@ class ArtistController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Artist  $artist
+     * @param  \App\Models\Artwork  $artist
      * @return \Illuminate\Http\Response
      */
-    public function show(Artist $artist)
+    public function show(Artwork $artwork)
     {
-        return view('artist.show', compact('artist'));
+        return view('artwork.show', compact('artwork'));
     }
 
     /**
@@ -56,19 +56,19 @@ class ArtistController extends Controller
      * @param  \App\Models\Artist  $artist
      * @return \Illuminate\Http\Response
      */
-    public function edit(Artist $artist)
+    public function edit(Artwork $artwork)
     {
-        //
+
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Artist  $artist
+     * @param  \App\Models\Artwork  $artist
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Artist $artist)
+    public function update(Request $request, Artwork $artwork)
     {
         //
     }
@@ -76,10 +76,10 @@ class ArtistController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Artist  $artist
+     * @param  \App\Models\Artwork  $artist
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Artist $artist)
+    public function destroy(Artwork $artwork)
     {
         //
     }

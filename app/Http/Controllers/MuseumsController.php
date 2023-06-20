@@ -45,9 +45,9 @@ class MuseumsController extends Controller
      * @param  \App\Models\museums  $museums
      * @return \Illuminate\Http\Response
      */
-    public function show(museum $museums)
+    public function show(museum $museum)
     {
-        //
+        return view('museum.show', compact('museum'));
     }
 
     /**
