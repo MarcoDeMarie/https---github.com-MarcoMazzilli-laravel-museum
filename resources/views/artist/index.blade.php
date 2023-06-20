@@ -22,7 +22,7 @@
                         <td>{{ $artist->date_of_birth }}</td>
                         <td>{{ $artist->place_of_birth }}</td>
                         <td>
-                            <a class="btn btn-primary" href="#">VAI</a>
+                            <a class="btn btn-primary" href="{{ route('artist.show', $artist) }}">VAI</a>
                         </td>
                     </tr>
                 @endforeach
